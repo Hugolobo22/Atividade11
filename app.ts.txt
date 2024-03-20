@@ -56,7 +56,7 @@ console.log(getDivArrow(30, 3))
   "Esta é a Xª vez que essa string é exibida."
 */
 
-let textPrinter = (parameter: string = 'Não passado valor!'): void => console.log(`Esta é a ${parameter}ª vez que essa string é exibida.`)
+let textPrinter = (parameter: string = 'Não passado valor!') => console.log(`Esta é a ${parameter}ª vez que essa string é exibida.`)
 
 for (let i: number = 0; i < 7; i++) {
     textPrinter((i + 1).toString())
@@ -77,7 +77,7 @@ const millennialWords: string[] = ['lol', 'yolo', 'troll', 'stalkear', 'selfie',
 
 const millennialWordsUpperCase: string[] = millennialWords.map(word => word.toUpperCase())
 
-const arrayPrinter = (array: string[]): void => console.log(array)
+const arrayPrinter = (array: string[]) => console.log(array)
 
 arrayPrinter(millennialWordsUpperCase)
 
@@ -123,7 +123,7 @@ console.log(testCountPositive(randomNumbers))
 
 // getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42])
 
-const arrayPrint = (array: number[]): void => {
+const arrayPrint = (array: number[]) => {
     console.log(array)
 }
 
@@ -328,9 +328,9 @@ console.log('O valor passado é null? ' + (isNullChecker(varNuller) ? 'Sim' : 'N
     foi exibido.
 */
 
-const impressoraCB = (funcPrinterArrayCB: () => void): void => { funcPrinterArrayCB() }
+const funcPrinterArrayCB = () => console.log('Teles')
 
-const funcPrinterArrayCB = (): void => console.log('Teles')
+const impressoraCB = (funcPrinterArrayCB: () => void) => { funcPrinterArrayCB() }
 
 impressoraCB(funcPrinterArrayCB)
 
@@ -364,7 +364,7 @@ console.log(callBackFunc(triplica, 10))
 
 const numbers: number[] = [1, 2, 3]
 
-const logArrayNumbers = (number: number, index: number, array: number[]): void => {
+const logArrayNumbers = (number: number, index: number, array: number[]) => {
     console.log(`O ${index + 1}º item do array ${array} é ${number}.`)
 }
 
